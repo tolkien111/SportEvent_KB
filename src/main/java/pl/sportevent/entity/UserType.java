@@ -1,5 +1,5 @@
-package pl.sportevent.entity;
+package pl.justmedia.entity;
 
 public enum UserType {
-    PLAYER,ORGANIZER;
+    PLAYER,ORGANIZER
 }

@@ -1,4 +1,4 @@
-package pl.sportevent.entity;
+package pl.justmedia.entity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -9,8 +9,9 @@ import java.util.UUID;
 
 public interface EventsRepository extends JpaRepository <Event, UUID> {
 
-    List<Event> findByEventDate (LocalDateTime eventDate);
-
     List<Event> findByEventTitle (String eventTitle);
-
+    List<Event> findByEventDate (LocalDateTime eventDate);
+    @Query("from Subscription s where s.event = (?1)")
+    List<Subscription> findEventSubscriptions(Event event);
+    //list aproved
 }

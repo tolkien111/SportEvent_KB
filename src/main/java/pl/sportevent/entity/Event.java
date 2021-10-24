@@ -1,19 +1,21 @@
-package pl.sportevent.entity;
+package pl.justmedia.entity;
 
-import lombok.*;
+import com.sun.istack.NotNull;
+import lombok.AccessLevel;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Table(name = "events")
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @EqualsAndHashCode
-
 public class Event {
     @Id
     private UUID eventId;
@@ -21,19 +23,21 @@ public class Event {
     private LocalDateTime eventDate;
     private int eventPlayerLimit;
     private double eventFee;
-    @OneToMany
+    /*
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "event_id")
     private List<Subscription> eventSubscriptions;
+    */
 
-    public Event(@NonNull String eventTitle,
-                 @NonNull LocalDateTime eventDate,
-                 @NonNull int eventPlayerLimit,
-                 @NonNull double eventFee) {
+    public Event(@NotNull String eventTitle,
+                 @NotNull LocalDateTime eventDate,
+                 @NotNull Integer eventPlayerLimit,
+                 @NotNull double eventFee) {
         this.eventId = UUID.randomUUID();
         this.eventTitle = eventTitle;
         this.eventDate = eventDate;
         this.eventPlayerLimit = eventPlayerLimit;
         this.eventFee = eventFee;
-        this.eventSubscriptions = new ArrayList<>();
     }
+
 }

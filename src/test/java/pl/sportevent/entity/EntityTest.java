@@ -1,5 +1,4 @@
-package pl.sportevent.entity;
-
+package pl.justmedia.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,16 +8,15 @@ import javax.transaction.Transactional;
 
 @SpringBootTest
 @Transactional
-public class EntityTest {
+abstract class EntityTest {
 
     @Autowired
-    protected EntityManager entityManager;
+    protected EntityManager em;
 
-    protected void persist(Object entity){
-        entityManager.persist(entity);
-        entityManager.flush();
-        entityManager.clear();
+    protected void persist(Object entity) {
+        // KLUCZ: ID, Wartość: Encja
+        em.persist(entity); // dodanie do cache
+        em.flush(); // wysłanie cache do db: insert into addresses ..........
+        em.clear(); // czyszczenie cache
     }
-
-
 }

@@ -1,15 +1,14 @@
-package pl.sportevent.entity;
+package pl.justmedia.entity;
 
-import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import pl.justmedia.service.dto.RegisterOrganizerForm;
+import pl.justmedia.service.exception.EventException;
+import pl.justmedia.service.exception.SubscriptionException;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -17,26 +16,55 @@ import java.util.Objects;
 @Entity
 @DiscriminatorValue("ORGANIZER")
 @Getter
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Organizer extends User {
     private String organizerName;
-
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "organizer_id")
-    private List<Event> organizerEventList;
+    private List<Event> organizerEvents;
 
-    public Organizer(@NonNull String userPassword,
-                     @NonNull String userLogin,
-                     @NonNull String userEmail,
+    public Organizer(String userPassword,
+                     String userLogin,
+                     String userEmail,
                      String userCity,
                      String userStreet,
                      String userCountry,
                      String userZipCode,
-                     String organizerName) {
+                     @NonNull String organizerName) {
         super(userPassword, userLogin, userEmail, userCity, userStreet, userCountry, userZipCode);
         this.organizerName = organizerName;
-        this.organizerEventList = new ArrayList<>();
+        this.organizerEvents = new ArrayList<>();
     }
+
+    public static Organizer createWith(RegisterOrganizerForm form) {
+        return new Organizer (form.getUserPassword(),
+                form.getUserLogin(),
+                form.getUserEmail(),
+                form.getUserCity(),
+                form.getUserStreet(),
+                form.getUserCountry(),
+                form.getUserZipCode(),
+                form.getOrganizerName());
+    }
+    public void addEvent(Event event){
+        if(event != null) {
+            if( !organizerEvents.contains(event)){
+                organizerEvents.add(event);
+            } else {
+                throw new EventException("Event already exist for this Organizer");
+            }
+        }
+    }
+    public void removeEvent(Event event){
+        if(event != null) {
+            if( organizerEvents.contains(event)){
+                organizerEvents.remove(event);
+            } else {
+                throw new EventException("Event for this organizer not exist");
+            }
+        }
+    }
+
 
     @Override
     public String getName() {

@@ -1,31 +1,49 @@
-package pl.sportevent.entity;
+package pl.justmedia.entity;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonGetter;
 import lombok.*;
+import pl.justmedia.service.dto.SubscriptionView;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
-
 @Entity
 @Table(name = "subscriptions")
 @NoArgsConstructor(access = AccessLevel.PRIVATE) // for hibernate
 @Getter
-public class Subscription {
+@EqualsAndHashCode
 
+public class Subscription {
     @Id
     private UUID subscriptionId;
     private boolean subscriptionPaymentDone;
     private LocalDateTime subscriptionDate;
-    private boolean subscriptionApporoved;
+    private boolean subscriptionApproved;
+   @OneToOne()
+   @JoinColumn(name = "event_id")
 
-    public Subscription(@NonNull boolean subscriptionPaymentDone,
-                        @NonNull LocalDateTime subscriptionDate,
-                        @NonNull boolean subscriptionApporoved) {
-        this.subscriptionId = UUID.randomUUID();
+    private Event event;
+
+    public Subscription(Boolean subscriptionPaymentDone,
+                        LocalDateTime subscriptionDate,
+                        Boolean subscriptionApproved,
+                        Event event) {
+        this.subscriptionId =  UUID.randomUUID();
         this.subscriptionPaymentDone = subscriptionPaymentDone;
         this.subscriptionDate = subscriptionDate;
-        this.subscriptionApporoved = subscriptionApporoved;
+        this.subscriptionApproved = subscriptionApproved;
+        this.event = event;
+    }
+
+    public SubscriptionView toView(){
+        return new SubscriptionView(
+                subscriptionId.toString(),
+                Boolean.toString(subscriptionPaymentDone),
+                subscriptionDate.toString(),
+                Boolean.toString(subscriptionApproved),
+                event.getEventTitle(),
+                event.getEventDate().toString(),
+                event.getEventId().toString());
     }
 }
