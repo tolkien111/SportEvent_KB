@@ -1,11 +1,11 @@
-package pl.justmedia.service;
+package pl.sportevent.service;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import pl.justmedia.entity.*;
-import pl.justmedia.service.dto.*;
-import pl.justmedia.service.exception.SubscriptionException;
+import pl.sportevent.entity.*;
+import pl.sportevent.service.dto.*;
+import pl.sportevent.service.exception.SubscriptionException;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;

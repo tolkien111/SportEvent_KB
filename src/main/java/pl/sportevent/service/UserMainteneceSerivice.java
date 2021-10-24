@@ -1,11 +1,11 @@
-package pl.justmedia.service;
+package pl.sportevent.service;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pl.justmedia.entity.User;
-import pl.justmedia.entity.UserRepository;
+import pl.sportevent.entity.User;
+import pl.sportevent.entity.UserRepository;
 
 @Service
 @Transactional

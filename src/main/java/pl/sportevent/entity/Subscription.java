@@ -1,9 +1,9 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import lombok.*;
-import pl.justmedia.service.dto.SubscriptionView;
+import pl.sportevent.service.dto.SubscriptionView;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

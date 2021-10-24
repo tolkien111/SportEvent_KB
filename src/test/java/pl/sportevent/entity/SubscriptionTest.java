@@ -1,4 +1,4 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 import org.junit.jupiter.api.Test;
 

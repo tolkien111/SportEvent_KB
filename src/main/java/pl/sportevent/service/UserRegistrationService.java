@@ -1,16 +1,16 @@
-package pl.justmedia.service;
+package pl.sportevent.service;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pl.justmedia.entity.Organizer;
-import pl.justmedia.entity.Player;
-import pl.justmedia.entity.UserRepository;
-import pl.justmedia.service.dto.RegisterOrganizerForm;
-import pl.justmedia.service.dto.RegisterPlayerForm;
-import pl.justmedia.service.dto.RegisteredUserId;
-import pl.justmedia.service.exception.EmailAlreadyExistException;
+import pl.sportevent.entity.Organizer;
+import pl.sportevent.entity.Player;
+import pl.sportevent.entity.UserRepository;
+import pl.sportevent.service.dto.RegisterOrganizerForm;
+import pl.sportevent.service.dto.RegisterPlayerForm;
+import pl.sportevent.service.dto.RegisteredUserId;
+import pl.sportevent.service.exception.EmailAlreadyExistException;
 
 
 

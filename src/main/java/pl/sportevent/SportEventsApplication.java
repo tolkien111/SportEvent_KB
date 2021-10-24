@@ -1,9 +1,9 @@
-package pl.justmedia;
+package pl.sportevent;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import pl.justmedia.entity.*;
+import pl.sportevent.entity.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,13 +11,13 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
-import pl.justmedia.service.OrganizerEventService;
-import pl.justmedia.service.PlayerSubscriptionService;
-import pl.justmedia.service.UserRegistrationService;
-import pl.justmedia.service.dto.AddEventForm;
-import pl.justmedia.service.dto.AddSubscriptionForm;
-import pl.justmedia.service.dto.RegisterOrganizerForm;
-import pl.justmedia.service.dto.RegisterPlayerForm;
+import pl.sportevent.service.OrganizerEventService;
+import pl.sportevent.service.PlayerSubscriptionService;
+import pl.sportevent.service.UserRegistrationService;
+import pl.sportevent.service.dto.AddEventForm;
+import pl.sportevent.service.dto.AddSubscriptionForm;
+import pl.sportevent.service.dto.RegisterOrganizerForm;
+import pl.sportevent.service.dto.RegisterPlayerForm;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;

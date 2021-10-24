@@ -1,9 +1,9 @@
-package pl.justmedia.service.dto;
+package pl.sportevent.service.dto;
 
 import lombok.Getter;
 import lombok.Value;
-import pl.justmedia.entity.Subscription;
-import pl.justmedia.entity.UserType;
+import pl.sportevent.entity.Subscription;
+import pl.sportevent.entity.UserType;
 
 import java.util.List;
 import java.util.UUID;

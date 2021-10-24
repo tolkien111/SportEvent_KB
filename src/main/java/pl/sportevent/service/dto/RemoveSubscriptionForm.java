@@ -1,7 +1,7 @@
-package pl.justmedia.service.dto;
+package pl.sportevent.service.dto;
 
 import lombok.Value;
-import pl.justmedia.entity.Event;
+import pl.sportevent.entity.Event;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

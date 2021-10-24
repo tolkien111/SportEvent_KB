@@ -1,11 +1,11 @@
-package pl.justmedia.service.dto;
+package pl.sportevent.service.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Value;
-import pl.justmedia.entity.Subscription;
-import pl.justmedia.entity.UserType;
+import pl.sportevent.entity.Subscription;
+import pl.sportevent.entity.UserType;
 
 import java.time.LocalDate;
 import java.util.List;

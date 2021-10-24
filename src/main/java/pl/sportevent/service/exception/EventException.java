@@ -1,4 +1,4 @@
-package pl.justmedia.service.exception;
+package pl.sportevent.service.exception;
 
 import lombok.NonNull;
 

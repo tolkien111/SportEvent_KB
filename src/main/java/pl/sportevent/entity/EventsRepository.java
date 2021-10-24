@@ -1,4 +1,4 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

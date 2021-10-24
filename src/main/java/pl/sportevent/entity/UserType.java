@@ -1,4 +1,4 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 public enum UserType {
     PLAYER,ORGANIZER

@@ -1,7 +1,7 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 import lombok.*;
-import pl.justmedia.service.dto.PlayerView;
+import pl.sportevent.service.dto.PlayerView;
 
 import javax.persistence.*;
 import java.util.Objects;

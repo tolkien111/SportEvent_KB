@@ -1,14 +1,14 @@
-package pl.justmedia.service;
+package pl.sportevent.service;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pl.justmedia.entity.Player;
-import pl.justmedia.entity.User;
-import pl.justmedia.entity.UserRepository;
-import pl.justmedia.entity.UserType;
-import pl.justmedia.service.dto.PlayerDetails;
-import pl.justmedia.service.dto.PlayerView;
+import pl.sportevent.entity.Player;
+import pl.sportevent.entity.User;
+import pl.sportevent.entity.UserRepository;
+import pl.sportevent.entity.UserType;
+import pl.sportevent.service.dto.PlayerDetails;
+import pl.sportevent.service.dto.PlayerView;
 
 import java.util.List;
 import java.util.UUID;

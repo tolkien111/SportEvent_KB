@@ -1,4 +1,4 @@
-package pl.justmedia.controller;
+package pl.sportevent.controller;
 
 import lombok.Value;
 import org.springframework.http.HttpStatus;
@@ -6,8 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import pl.justmedia.service.exception.BusinessServiceException;
-import pl.justmedia.service.exception.UserNotExistException;
+import pl.sportevent.service.exception.BusinessServiceException;
+import pl.sportevent.service.exception.UserNotExistException;
 
 import java.time.Instant;
 

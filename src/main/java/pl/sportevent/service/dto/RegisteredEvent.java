@@ -1,8 +1,8 @@
-package pl.justmedia.service.dto;
+package pl.sportevent.service.dto;
 
 import lombok.NonNull;
 import lombok.Value;
-import pl.justmedia.entity.Event;
+import pl.sportevent.entity.Event;
 
 import java.util.UUID;
 

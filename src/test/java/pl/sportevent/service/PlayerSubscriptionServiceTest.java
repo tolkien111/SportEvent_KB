@@ -1,17 +1,17 @@
-package pl.justmedia.service;
+package pl.sportevent.service;
 
 import lombok.NonNull;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.shadow.com.univocity.parsers.common.record.RecordMetaData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import pl.justmedia.entity.Event;
-import pl.justmedia.entity.Player;
-import pl.justmedia.entity.Subscription;
-import pl.justmedia.entity.UserRepository;
-import pl.justmedia.service.dto.AddSubscriptionForm;
-import pl.justmedia.service.dto.RegisterPlayerForm;
-import pl.justmedia.service.dto.RemoveSubscriptionForm;
+import pl.sportevent.entity.Event;
+import pl.sportevent.entity.Player;
+import pl.sportevent.entity.Subscription;
+import pl.sportevent.entity.UserRepository;
+import pl.sportevent.service.dto.AddSubscriptionForm;
+import pl.sportevent.service.dto.RegisterPlayerForm;
+import pl.sportevent.service.dto.RemoveSubscriptionForm;
 
 import javax.transaction.Transactional;
 

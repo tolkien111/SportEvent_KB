@@ -1,4 +1,4 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,13 +1,13 @@
-package pl.justmedia.service;
+package pl.sportevent.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import pl.justmedia.entity.*;
-import pl.justmedia.service.dto.AddEventForm;
-import pl.justmedia.service.dto.AddSubscriptionForm;
-import pl.justmedia.service.dto.RemoveEventForm;
-import pl.justmedia.service.dto.RemoveSubscriptionForm;
+import pl.sportevent.entity.*;
+import pl.sportevent.service.dto.AddEventForm;
+import pl.sportevent.service.dto.AddSubscriptionForm;
+import pl.sportevent.service.dto.RemoveEventForm;
+import pl.sportevent.service.dto.RemoveSubscriptionForm;
 
 import javax.transaction.Transactional;
 import java.time.LocalDate;

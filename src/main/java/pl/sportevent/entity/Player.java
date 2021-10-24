@@ -1,15 +1,15 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import pl.justmedia.service.dto.PlayerDetails;
-import pl.justmedia.service.dto.PlayerView;
-import pl.justmedia.service.dto.RegisterOrganizerForm;
-import pl.justmedia.service.dto.RegisterPlayerForm;
-import pl.justmedia.service.exception.SubscriptionException;
+import pl.sportevent.service.dto.PlayerDetails;
+import pl.sportevent.service.dto.PlayerView;
+import pl.sportevent.service.dto.RegisterOrganizerForm;
+import pl.sportevent.service.dto.RegisterPlayerForm;
+import pl.sportevent.service.exception.SubscriptionException;
 
 import javax.persistence.*;
 import java.time.LocalDate;

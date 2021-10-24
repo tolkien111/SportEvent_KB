@@ -1,12 +1,12 @@
-package pl.justmedia.entity;
+package pl.sportevent.entity;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import pl.justmedia.service.dto.RegisterOrganizerForm;
-import pl.justmedia.service.exception.EventException;
-import pl.justmedia.service.exception.SubscriptionException;
+import pl.sportevent.service.dto.RegisterOrganizerForm;
+import pl.sportevent.service.exception.EventException;
+import pl.sportevent.service.exception.SubscriptionException;
 
 import javax.persistence.*;
 import java.util.ArrayList;
